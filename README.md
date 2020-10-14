@@ -1,6 +1,6 @@
 # My Portfolio ROR
 
-This is a repository of my portfolio tranposed from ASP.NET cCre MVC to Ruby on Rails
+Repository for My Portfolio website transposed from the original codebase written using ASP.NET Core MVC to Ruby on Rails
 
 At present using MS SQL Server as data storage but plan to update to PostgresSQL or MongoDB
 
