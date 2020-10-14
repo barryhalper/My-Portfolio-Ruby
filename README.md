@@ -8,4 +8,3 @@ Rails version  '6.0.3.4'
 
 
 
-* ...
