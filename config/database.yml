@@ -1,0 +1,25 @@
+# MS SQL SERVER
+#
+default: &default
+  adapter: sqlserver
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: Portfolio
+  dataserver: BARRY-DELL-XPS
+  port: 1433
+  username: ruby_user
+  password: '1234'
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  <<: *default
+  database: db/production.sqlite3

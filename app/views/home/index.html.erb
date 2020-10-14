@@ -1,0 +1,17 @@
+
+<div id="home" class="jumbotron ">
+
+</div>
+<div class="skills d-flex justify-content-center ">
+  <div id="skills-dock">
+
+
+   <% @my_skills.each do |skill| %>
+    <div>
+       <a href="/skills/" title=""> <%= image_tag("http://barryhalper.com.servepreview.net/image/skills/#{skill.image}", class:"img-fluid", alt:skill.name) %></a>
+    </div>
+
+      <% end %>
+
+  </div>
+</div>
