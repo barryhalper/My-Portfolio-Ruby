@@ -1,4 +1,4 @@
-# My Portfolio ROR
+# My Portfolio in Ruby
 
 Repository for My Portfolio website transposed from the original codebase written using ASP.NET Core MVC to Ruby on Rails
 
