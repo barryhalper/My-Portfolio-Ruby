@@ -1,0 +1,64 @@
+<footer class="page-footer pt-4 pb-4">
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-8">
+      <h5> About Me</h5>
+
+      <span><%=Settings.lead %>  <a href="#" id="footer-show-more" class="show-more more"><i class="fad fa-info-circle "></i> <span> more</span> </a></span>
+
+
+      <div id="about-me">
+
+        Primarily based in London I have a wealth of knowledge in web development, database architecture, web design, SEO, server and domain management. As a technical lead, I have experience in team building,  managing developers, determining project requirements, liaising with both internal and external clients to build projects that increase profits, and drive efficiency.
+        <br />
+        <a href="/about" class="more"><i class="fad fa-info-square"></i> read more </a>
+
+      </div>
+
+
+      <!-- Copyright -->
+
+    </div>
+
+
+
+    <div class="col-md-4 ">
+      <div class="float-right">
+
+        <ul class="social-media">
+         <%= link_to("mailto:#{Settings.email}") do %>
+            <i class="fad fa-envelope-open"></i>
+          <% end %>
+
+          <%= link_to(Settings.linked_in) do %>
+            <i class="fad fa-linkedin"></i>
+          <% end %>
+
+          <%= link_to(Settings.twitter) do %>
+            <i class="fad fa-twitter-square"></i>
+          <% end %>
+
+          <%= link_to(Settings.github) do %>
+            <i class="fad github-square"></i>
+          <% end %>
+
+        <!--  <li><a href="mailto:@appSettings.Value.ContactSettings.Email"> <i class="fad fa-envelope-open"></i> </a></li>
+          <li><a href="@appSettings.Value.ContactSettings.LinkedIn"> <i class="fab fa-linkedin"></i> </a></li>
+
+          <li><a href="@appSettings.Value.ContactSettings.Twitter"><i class="fab fa-twitter-square"></i></a> </li>
+          <li> <a href="@appSettings.Value.ContactSettings.Github"><i class="fab fa-github-square"></i></a> </li>-->
+        </ul>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Copyright -->
+</footer>
+

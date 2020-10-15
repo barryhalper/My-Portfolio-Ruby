@@ -4,8 +4,12 @@
     <div class="container pt-1">
 
 
-      <a class="navbar-brand" ><img class="pt-2 mr-2 img-fluid d-none d-md-inline-block" src="~/image/barry-halper-profile.jpg" alt=""> </a>
+      <a class="navbar-brand" >
 
+
+        <%= link_to "/" do %>
+          <%= image_tag "#{Settings.live_site_path}/image/barry-halper-profile.jpg", alt: Settings.author, class: "pt-2 mr-2 img-fluid d-none d-md-inline-block" %>
+        <% end %>
 
       <button class="navbar-toggler" data-toggle="collapse" data-target="#defaultNavbar1">
         <i class="fas fa-bars"></i>
@@ -13,34 +17,32 @@
       </button>
 
 
-
-
       <div class="collapse navbar-collapse " id="defaultNavbar1">
         <ul class="nav navbar-nav ml-auto">
 
           <li class="nav-item">
-            <a class="nav-link " href="/About"> <span>About</span> <i class="fad fa-chart-line"></i></a>
+            <a class="nav-link " href="/about"> <span>About</span> <i class="fad fa-chart-line"></i></a>
           </li>
 
 
           <li class="nav-item">
-            <a class="nav-link" href="/Skills"> <span>Skills</span> <i class="fad fa-chart-line"></i></a>
+            <a class="nav-link" href="/skills"> <span>Skills</span> <i class="fad fa-chart-line"></i></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/Projects"><span>Projects </span><i class="fad fa-project-diagram"></i> </a>
+            <a class="nav-link" href="/projects"><span>Projects </span><i class="fad fa-project-diagram"></i> </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/Testimonials"> <span>Testimonials</span> <i class="fad fa-newspaper"></i> </a>
+            <a class="nav-link" href="/testimonials"> <span>Testimonials</span> <i class="fad fa-newspaper"></i> </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/Education"> <span>Education </span><i class="fad fa-university"></i></a>
+            <a class="nav-link" href="/education"> <span>Education </span><i class="fad fa-university"></i></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/CV"> <span>CV</span> <i class="fad fa-file-pdf"></i> </a>
+            <a class="nav-link" href="/cv"> <span>CV</span> <i class="fad fa-file-pdf"></i> </a>
           </li>
 
           <li class="nav-item">
@@ -50,13 +52,12 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" href="/Contact"> <span>Contact</span> <i class="fad fa-envelope"></i></a>
+            <a class="nav-link" href="/contact"> <span>Contact</span> <i class="fad fa-envelope"></i></a>
           </li>
         </ul>
       </div>
     </div>
+
   </nav>
-
-
 
 </div>

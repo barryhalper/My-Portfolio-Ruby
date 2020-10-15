@@ -1,0 +1,95 @@
+@media screen and (min-width: 576px) {
+    .jumbotron {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+@media (min-width:576px) and (max-width:768px) {
+    .nav-link i {
+        display: block;
+    }
+
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+        color: var(--white);
+        margin-top: 0;
+    }
+
+    .jumbotron section {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 7%;
+        max-height: 65vh;
+    }
+
+
+    #testimonial .pullquote {
+        font-size: 1.2em;
+
+    }
+    #testimonial .recommendation {
+        width: 90%
+    }
+
+
+
+
+    #home .skills {
+        bottom: 20px;
+        position: absolute;
+        padding: 20px;
+    }
+
+    #skills-dock div {
+        padding: 0 10px 0 10px;
+        margin: auto;
+    }
+
+    #skills .skills-container {
+        display: flex;
+        justify-content: center
+
+    }
+
+
+}
+
+
+@media (min-width: 1200px) {
+    .modal-dialog {
+        max-width: 90Vw;
+    }
+
+    #Modal {
+        background-color: transparent !important;
+    }
+
+
+}
+
+@media(min-width:1300px) {
+    .jumbotron div.container {
+        display: flex;
+    }
+
+    .jumbotron div.container section {
+        left: 17%
+    }
+
+    #testimonial div.container {
+        left: 0;
+        display: flex;
+    }
+
+    #testimonial section {
+        left:  16%;
+    }
+
+}
+

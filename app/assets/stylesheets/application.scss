@@ -14,6 +14,7 @@
  */
 @import '_vars.css';
 @import "bootstrap";
+@import "futura-lt-cufonfonts-webfont/style.css";
 
 /********LAYOUT/NAVIGATION *********************************/
 
@@ -25,6 +26,7 @@ body {
 }
 
 h1 {
+
     font-size: 1.7rem;
     color: var(--second-brand-color);
     margin-top: 15px;

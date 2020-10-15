@@ -4,8 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyPortfolio</title>
-
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+        <%= Settings.author %>
+    </title>
+    <meta name='description'
+          content='<%= yield_meta_tag(:description, 'Default description') %>' />
     <!-- Bootstrap compiled and minified CSS -->
 
 
@@ -13,20 +17,24 @@
     <%= csp_meta_tag %>
 
 
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'fonts/futura-lt-cufonfonts-webfont/style.css': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'fontawesome-pro-5.14.0-web/css/fontawesome.min.css': 'reload' %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'media', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+  <div class="container p-0" id="main-container">
+
   <%= render "layouts/menu" %>
   <main>
   <%= yield %>
   </main>
+  </div>
 
+  <%= render "layouts/footer" %>
   </body>
 
 

@@ -1,17 +1,32 @@
+<% title("#{Settings.author} #{Settings.lead}")  %>
 
 <div id="home" class="jumbotron ">
+  <%= background_image("abstract-landscape") %>
 
-</div>
-<div class="skills d-flex justify-content-center ">
-  <div id="skills-dock">
+    <div class="container">
+
+      <section class="page">
+
+        <h1> <%=Settings.title %></h1>
+        <p class="">
+          <a class="btn btn-primary btn-lg"><i class="fa fa-envelope-open"></i> Contact Me</a>
+
+        </p>
+      </section>
 
 
-   <% @my_skills.each do |skill| %>
-    <div>
-       <a href="/skills/" title=""> <%= image_tag("http://barryhalper.com.servepreview.net/image/skills/#{skill.image}", class:"img-fluid", alt:skill.name) %></a>
-    </div>
+          <div class="skills d-flex justify-content-center ">
+            <div id="skills-dock">
 
-      <% end %>
 
+             <% @my_skills.each do |skill| %>
+              <div>
+                 <a href="/skills/" title=""> <%= image_tag("#{Settings.live_site_path}/image/skills/#{skill.image}", class:"img-fluid", alt:skill.name) %></a>
+              </div>
+
+                <% end %>
+
+            </div>
+          </div>
   </div>
 </div>
