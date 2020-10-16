@@ -5,7 +5,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     @article = articles(:one)
   end
 
-  test "should get index" do
+  test "should get index.html.erb" do
     get articles_url
     assert_response :success
   end

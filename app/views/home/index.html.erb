@@ -19,7 +19,7 @@
             <div id="skills-dock">
 
 
-             <% @my_skills.each do |skill| %>
+           <% @skills.each do |skill| %>
               <div>
                  <a href="/skills/" title=""> <%= image_tag("#{Settings.live_site_path}/image/skills/#{skill.image}", class:"img-fluid", alt:skill.name) %></a>
               </div>

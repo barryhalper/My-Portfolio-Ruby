@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @my_skills = Skill.where(home: true)
+      @skills = Skill.where("home=1")
+      @test = "hello"
+      puts @test
   end
 end

@@ -18,8 +18,27 @@
 <section id="about-content">
   <div class="container">
     <div class="row mt-3 ">
+      <% @group.each do |types, values| %>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-4">
 
 
+          <div class="panel">
+            <div class="panel-heading">
+             <%=  types %> <i class="fad <%= types %>.Icon"></i>
+            </div>
+
+            <div class="panel-body">
+              <ul>
+                 <% values.each do |val| %>
+                  <li> <%= val[:desc] %></li>
+
+                  <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
     </div>
   </div>
 </section>

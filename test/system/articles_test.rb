@@ -5,7 +5,7 @@ class ArticlesTest < ApplicationSystemTestCase
     @article = articles(:one)
   end
 
-  test "visiting the index" do
+  test "visiting the index.html.erb" do
     visit articles_url
     assert_selector "h1", text: "Articles"
   end

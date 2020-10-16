@@ -4,10 +4,7 @@
     <div class="container pt-1">
 
 
-      <a class="navbar-brand" >
-
-
-        <%= link_to "/" do %>
+        <%= link_to("/", class: "navbar-brand") do %>
           <%= image_tag "#{Settings.live_site_path}/image/barry-halper-profile.jpg", alt: Settings.author, class: "pt-2 mr-2 img-fluid d-none d-md-inline-block" %>
         <% end %>
 

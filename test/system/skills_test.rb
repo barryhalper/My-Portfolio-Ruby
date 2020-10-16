@@ -5,7 +5,7 @@ class SkillsTest < ApplicationSystemTestCase
     @skill = skills(:one)
   end
 
-  test "visiting the index" do
+  test "visiting the index.html.erb" do
     visit skills_url
     assert_selector "h1", text: "Skills"
   end

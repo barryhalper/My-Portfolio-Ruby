@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_14_164027) do
+ActiveRecord::Schema.define(version: 2020_10_16_162422) do
+
+  create_table "abouts", force: :cascade do |t|
+    t.string "desc"
+    t.integer "order"
+    t.string "about_type"
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string "content"
@@ -24,6 +30,47 @@ ActiveRecord::Schema.define(version: 2020_10_14_164027) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "assoc_media", force: :cascade do |t|
+    t.string "category"
+    t.string "url"
+    t.string "file"
+    t.integer "order"
+    t.bigint "project_id"
+  end
+
+  create_table "course", id: false, force: :cascade do |t|
+    t.varchar "_id", limit: 50
+    t.varchar "Title", limit: 50
+    t.varchar "Year", limit: 50
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "category"
+    t.string "url"
+    t.string "file"
+    t.integer "order"
+    t.bigint "project_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "order"
+    t.string "content"
+    t.string "desc"
+    t.string "name"
+  end
+
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.string "desc"
@@ -35,4 +82,5 @@ ActiveRecord::Schema.define(version: 2020_10_14_164027) do
     t.integer "order"
   end
 
+  add_foreign_key "assoc_media", "projects", name: "FK_assoc_media_projects"
 end

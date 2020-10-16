@@ -5,7 +5,7 @@ class SkillsControllerTest < ActionDispatch::IntegrationTest
     @skill = skills(:one)
   end
 
-  test "should get index" do
+  test "should get index.html.erb" do
     get skills_url
     assert_response :success
   end
