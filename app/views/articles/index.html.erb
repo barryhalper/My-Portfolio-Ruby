@@ -1,39 +1,44 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+<h1>TEST</h1>
+<section>
+  <div class="container mt-3 " id="blog-body">
+    <!--  Split model into several smaller arrays to generate a row for each 2 items. -->
+    <% rows = @articles.split(2) %>
+    <% rows.each do |row| %>
+      <div class="row">
+        <!-- @foreach (var article in row)
+         {
+           article.UrlPath = article.Title;-->
+          <% row.each do | article| %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>Image</th>
-      <th>Link</th>
-      <th>Summary</th>
-      <th>Published</th>
-      <th>Rssguidid</th>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.content %></td>
-        <td><%= article.image %></td>
-        <td><%= article.link %></td>
-        <td><%= article.summary %></td>
-        <td><%= article.published %></td>
-        <td><%= article.rssguidid %></td>
-        <td><%= article.title %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <div class="col-12 col-md-6">
+          <div class="panel">
+            <div class="panel-heading">
+              <!-- <a href="@article.UrlPath">
+                 @article.Title
+               </a>-->
+              <%= link_to "#{article[:title]}", blog_path(article.url_friendly)  %>
+            </div>
 
-<br>
+            <div class="panel-body">
+              <a href="">
+                <header class="blog-header">
+                  <img src="" alt="" class="" />
+                </header>
+              </a>
 
-<%= link_to 'New Article', new_article_path %>
+              <div class="summary mt-3"><a href="#"></a></div>
+
+              <div class="date mt=2"></div>
+
+
+            </div>
+          </div>
+        </div>
+        <%end %>
+      </div>
+
+    <%end %>
+  </div>
+</section>

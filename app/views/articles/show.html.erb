@@ -1,39 +1,55 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @article.image %>
-</p>
 
-<p>
-  <strong>Link:</strong>
-  <%= @article.link %>
-</p>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @article.summary %>
-</p>
 
-<p>
-  <strong>Published:</strong>
-  <%= @article.published %>
-</p>
+<div id="blog" class="mt-3">
+  <div class="container">
+    <article>
+      <div class="panel">
+        <div class="panel-heading">
+          <h1> <%=  @article[:title] %></h1>
 
-<p>
-  <strong>Rssguidid:</strong>
-  <%= @article.rssguidid %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+          <div class="byine">
+            <div class="row d-flex">
+              <div class="col-6">
+                <div class="date pt-3">
+                  <%=  @article[:published].strftime("%A %d %B %Y") %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+                </div>
+
+              </div>
+
+              <div class="col-6 ">
+                <div class=" float-right">
+                  <ul class="share">
+
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=@Model.FullPath"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://twitter.com/intent/tweet?source=webclient&amp;url=@Model.FullPath"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=@Model.FullPath"><i class="fab fa-linkedin"></i></a></li>
+
+
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="panel-body">
+        <%= raw @article[:content] %>
+
+        </div>
+
+      </div>
+
+
+    </article>
+
+  </div>
+</div>
