@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_19_142845) do
+ActiveRecord::Schema.define(version: 2020_10_20_133716) do
 
   create_table "abouts", force: :cascade do |t|
     t.string "desc"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_142845) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.string "content"
+    t.text_basic "content"
     t.string "image"
     t.string "link"
     t.string "summary"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 2020_10_19_142845) do
     t.string "file"
     t.integer "order"
     t.bigint "project_id"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "email"
+    t.string "message"
   end
 
   create_table "course", id: false, force: :cascade do |t|

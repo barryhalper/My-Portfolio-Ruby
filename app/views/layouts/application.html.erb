@@ -12,7 +12,6 @@
           content='<%= yield_meta_tag(:description, 'Default description') %>' />
     <!-- Bootstrap compiled and minified CSS -->
 
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,7 +25,7 @@
 
   <body>
 
-  <div class="container p-0" id="main-container">
+  <div class="container p-0 <%=  @nav_class %> id="main-container">
 
   <%= render "layouts/menu" %>
   <main>

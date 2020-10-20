@@ -1,10 +1,12 @@
 class ArticlesController < ApplicationController
-  #before_action :set_article, only: [:show, :edit, :update, :destroy]
+
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+
+    @articles = Article.all.select(:title, :published, :link, :image)
+
   end
 
   # GET /articles/1
@@ -19,8 +21,5 @@ class ArticlesController < ApplicationController
 
 
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:content, :image, :link, :summary, :published, :rssguidid, :title)
-    end
+
 end
