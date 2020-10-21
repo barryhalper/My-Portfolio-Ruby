@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_133716) do
+ActiveRecord::Schema.define(version: 2020_10_21_160554) do
 
   create_table "abouts", force: :cascade do |t|
     t.string "desc"
@@ -87,6 +87,11 @@ ActiveRecord::Schema.define(version: 2020_10_20_133716) do
     t.string "file"
     t.string "order"
     t.string "url"
+  end
+
+  create_table "rsses", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "skills", force: :cascade do |t|

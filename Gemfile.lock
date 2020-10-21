@@ -132,6 +132,13 @@ GEM
       railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    grape (1.5.0)
+      activesupport
+      builder
+      dry-types (>= 1.1)
+      mustermann-grape (~> 1.0.0)
+      rack (>= 1.3.0)
+      rack-accept
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
@@ -153,15 +160,20 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     msgpack (1.3.3-x64-mingw32)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    mustermann-grape (1.0.1)
+      mustermann (>= 1.0.0)
     nio4r (2.5.4)
     nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
-    papercut (2010.3.3.0)
     popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (4.3.6)
       nio4r (~> 2.0)
     rack (2.2.3)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -197,6 +209,13 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.8.2)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
+    rexml (3.1.9)
+    rss (0.2.9)
+      rexml
+    ruby2_keywords (0.0.2)
     rubyzip (2.3.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -265,11 +284,13 @@ DEPENDENCIES
   capybara (>= 2.15)
   config
   font-awesome-rails
+  grape
   jbuilder (~> 2.7)
   jquery-rails
-  papercut
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
+  responders
+  rss
   sass-rails (>= 6)
   selenium-webdriver
   tiny_tds

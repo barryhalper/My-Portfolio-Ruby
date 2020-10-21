@@ -16,7 +16,7 @@
     <%= csp_meta_tag %>
 
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'fontawesome-pro-5.14.0-web/css/fontawesome.min.css': 'reload' %>
+    <script src="https://kit.fontawesome.com/8a5bcfdeb6.js" crossorigin="anonymous"></script>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'media', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -25,7 +25,7 @@
 
   <body>
 
-  <div class="container p-0 <%=  @nav_class %> id="main-container">
+  <div class="container p-0 <%=  @nav_class %>" id="main-container">
 
   <%= render "layouts/menu" %>
   <main>
