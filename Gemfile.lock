@@ -63,6 +63,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.0.1.0)
       execjs
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -87,6 +88,12 @@ GEM
       dry-validation (~> 1.0, >= 1.0.0)
     crass (1.0.6)
     deep_merge (1.2.1)
+    devise (4.7.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     dry-configurable (0.11.6)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.7)
@@ -132,13 +139,6 @@ GEM
       railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    grape (1.5.0)
-      activesupport
-      builder
-      dry-types (>= 1.1)
-      mustermann-grape (~> 1.0.0)
-      rack (>= 1.3.0)
-      rack-accept
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
@@ -160,20 +160,17 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     msgpack (1.3.3-x64-mingw32)
-    mustermann (1.1.1)
-      ruby2_keywords (~> 0.0.1)
-    mustermann-grape (1.0.1)
-      mustermann (>= 1.0.0)
     nio4r (2.5.4)
     nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
+    nokogumbo (2.0.2)
+      nokogiri (~> 1.8, >= 1.8.4)
+    orm_adapter (0.5.0)
     popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (4.3.6)
       nio4r (~> 2.0)
     rack (2.2.3)
-    rack-accept (0.4.5)
-      rack (>= 0.4)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -215,8 +212,11 @@ GEM
     rexml (3.1.9)
     rss (0.2.9)
       rexml
-    ruby2_keywords (0.0.2)
     rubyzip (2.3.0)
+    sanitize (5.2.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.8.0)
+      nokogumbo (~> 2.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -253,6 +253,8 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2020.2)
       tzinfo (>= 1.0.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.0.4)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -283,14 +285,15 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   config
+  devise
   font-awesome-rails
-  grape
   jbuilder (~> 2.7)
   jquery-rails
+  nokogiri
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
-  responders
   rss
+  sanitize
   sass-rails (>= 6)
   selenium-webdriver
   tiny_tds

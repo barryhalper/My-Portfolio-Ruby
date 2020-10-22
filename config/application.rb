@@ -11,8 +11,16 @@ module MyPortfolio
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
-
+    config.autoload_paths += %W(#{config.root}/lib)
     # Auto-load API and its subdirectories
+
+    config.to_prepare do
+      Devise::SessionsController.layout "admin"
+      Devise::RegistrationsController.layout "admin"
+      Devise::ConfirmationsController.layout "admin"
+      Devise::UnlocksController.layout "admin"
+      Devise::PasswordsController.layout "admin"
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

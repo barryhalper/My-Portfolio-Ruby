@@ -6,8 +6,8 @@ ruby '2.6.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use ms sqlserver
-gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
+gem 'tiny_tds'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -54,5 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'config'
 gem 'font-awesome-rails'
+gem 'nokogiri'
 gem 'rss'
-
+gem 'sanitize'
+gem 'devise'

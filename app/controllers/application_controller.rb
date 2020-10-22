@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
     @nav_class = controller_name == "articles" ? "navbar-background": ""
   end
 
-
+  def after_sign_in_path_for(resource)
+    admin_root_path
+  end
 
 end

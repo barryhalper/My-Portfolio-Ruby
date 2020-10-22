@@ -1,0 +1,56 @@
+
+
+<div class="pos-f-t">
+
+  <nav class="navbar navbar-dark navbar-expand-md bg-darkpt-2 mr-auto">
+    <div class="container pt-1">
+
+      <%= link_to("/", class: "navbar-brand") do %>
+        <%= image_tag "#{Settings.live_site_path}/image/barry-halper-profile.jpg", alt: Settings.author, class: "pt-2 mr-2 img-fluid d-none d-md-inline-block" %>
+        CMS
+      <% end %>
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#defaultNavbar1">
+        <i class="fas fa-bars"></i>
+        <span class="navbar-toggler-icon d-none"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse " id="defaultNavbar1">
+        <ul class="nav navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <%= link_to(admin_skills_path, class:"nav-link") do %>
+              <span>Skills</span>
+             <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to(admin_projects_path, class:"nav-link") do %>
+              <span>Projects</span>
+            <% end %>
+          </li>
+
+         <li class="nav-item">
+            <%= link_to(admin_testimonials_path, class:"nav-link") do %>
+              <span>Testimonials</span>
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to(admin_courses_path, class:"nav-link") do %>
+              <span>Course</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "<span>Sign Out</span>".html_safe, destroy_user_session_path, :method => :delete, class:"nav-link" %>
+
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+</div>

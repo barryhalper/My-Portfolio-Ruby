@@ -18,11 +18,10 @@ class ArticlesController < ApplicationController
    def new
      article = Article.new
      article.read_rss
-
      article.feed.items.each do |item|
-       my_article = Article.new(:title => item.title)
-       Article.create(:title => item.title, :content => item.content_encoded, :rssguidid => item.guid.content, :link =>my_article.url_friendly, :published => item.published)
-       ##puts item
+       feed_item = article.rss_item(item)
+       Article.create(:title => feed_item[:title], :image=> feed_item[:image], :summary=> feed_item[:summary], :content => feed_item[:content], :rssguidid => feed_item[:guid], :link =>feed_item[:link], :published => feed_item[:published])
+
      end
 
      render layout: false

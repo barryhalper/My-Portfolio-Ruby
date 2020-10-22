@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+   Barry Halper CMS
+  </title>
+  <meta name='description'
+        content='<%= yield_meta_tag(:description, 'Default description') %>' />
+  <!-- Bootstrap compiled and minified CSS -->
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+
+  <script src="https://kit.fontawesome.com/8a5bcfdeb6.js" crossorigin="anonymous"></script>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+<div class="container p-0 navbar-background" id="main-container">
+ <%= render "layouts/admin_menu" %>
+
+  <main>
+    <%= yield %>
+  </main>
+</div>
+
+
+</body>
+
+
+
+
+
+</html>

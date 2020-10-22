@@ -1,5 +1,5 @@
 
-<h1>TEST</h1>
+
 <section>
   <div class="container mt-3 " id="blog-body">
     <!--  Split model into several smaller arrays to generate a row for each 2 items. -->
@@ -16,14 +16,14 @@
           <div class="panel">
             <div class="panel-heading">
 
-              <%= link_to "#{article[:title]}", blog_path(article.url_friendly)  %>
+              <%= link_to "#{article[:title]}", blog_path(Utilities::Strings.url_friendly(article.title))  %>
             </div>
 
             <div class="panel-body">
 
 
                 <header class="blog-header">
-                    <%= link_to image_tag article[:image],  href:blog_path(article.url_friendly) %>
+                    <%= link_to image_tag article[:image],  href:blog_path(Utilities::Strings.url_friendly(article.title)) %>
                 </header>
 
 
